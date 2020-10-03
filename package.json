@@ -1,0 +1,22 @@
+{
+  "name": "material-icons-list",
+  "description": "A simple script to get all icons name from material-icons official website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "nodemon": "^2.0.4",
+    "puppeteer": "^5.3.1",
+    "request": "^2.88.2",
+    "write-json": "^3.0.1"
+  },
+  "keywords": [
+    "material-icons"
+  ],
+  "author": "Mohssine Aboutaj",
+  "license": "MIT"
+}

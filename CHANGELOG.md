@@ -1,6 +1,10 @@
 # material icons list / CHANGELOG
 
-## v1.0.0 / 3-oct-2020 17:55 (GMT+1)
+## v1.0.1 / 3-oct-2020 18:05 (GMT+1)
+
+- add for [GitHub Packages](https://github.com/features/packages) feature
+
+## v1.0.1 / 3-oct-2020 17:55 (GMT+1)
 
 - remove non-used dependencies
 - add the repo URL to package.json

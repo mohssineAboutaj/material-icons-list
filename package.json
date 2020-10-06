@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/mohssineAboutaj/material-icons-list#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@mohssineaboutaj"
   }
 }

@@ -4,5 +4,5 @@
  */
 
 module.exports = {
-  baseURL: "https://material.io/resources/icons/?style=outline",
+  baseURL: "https://fonts.google.com/metadata/icons",
 };

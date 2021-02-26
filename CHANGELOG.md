@@ -1,5 +1,15 @@
 # material icons list / CHANGELOG
 
+## v1.1.0 / 26-feb-2021 14:50 (GMT+1)
+
+- deprecated _puppeteer_
+- use _axios_
+- add new props & functions
+  - iconsLength
+  - iconsListByCategory()
+  - iconsListByTag()
+  - iconsListByPopularity()
+
 ## v1.0.1 / 3-oct-2020 18:05 (GMT+1)
 
 - add for [GitHub Packages](https://github.com/features/packages) feature

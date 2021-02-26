@@ -1,42 +1,21 @@
-const puppeteer = require("puppeteer");
+const { get } = require("axios");
 const writeJson = require("write-json");
 const { baseURL } = require("./global");
 
-// init scraping
-(async () => {
-  // launch & init browser window
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+// get data
+get(baseURL).then(({ data }) => {
+  // trim & split
+  data = data.trim().split(")]}'");
 
-  // open the url
-  await page.goto(baseURL);
-
-  // get the page content
-  let output = await page.evaluate((data) => {
-    let result = [];
-    let all = document.querySelectorAll("icons-category icons-item");
-
-    // loop & extract icon name
-    all.forEach((icon) => {
-      let iconName = icon.querySelector("div").getAttribute("title");
-      iconName = iconName.trim();
-      if (iconName) {
-        result.push(iconName);
-      }
-    });
-
-    return result;
-  });
+  // convert to json format
+  data = JSON.parse(data[1]);
 
   // insert into json file
-  writeJson("data.json", output, (err) => {
+  writeJson("data.json", data.icons, (err) => {
     if (err) {
       throw err;
     } else {
       console.log("inserted successfuly");
     }
   });
-
-  // close browser
-  await browser.close();
-})();
+});

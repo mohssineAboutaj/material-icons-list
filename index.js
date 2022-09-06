@@ -51,15 +51,17 @@ function iconsListByTag(tag) {
  * @description Get list of icons filterd by popularity
  *
  * @param {String} count
+ * 
+ * @param {Boolean} onlyNames
  *
- * @returns Array[Object]
+ * @returns Array[Object] | Array[String]
  */
-function iconsListByPopularity(coubt = iconsLength) {
+function iconsListByPopularity(coubt = iconsLength, onlyNames = false) {
   data
     .sort((a, b) => {
       return ((a.popularity < b.popularity) ? 1 : -1);
     });
-  return data.slice(0, coubt - 1);
+  return onlyNames? data.slice(0, coubt - 1).map(a => a.name) : data.slice(0, coubt - 1);
 }
 
 // export

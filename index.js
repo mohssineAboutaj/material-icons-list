@@ -57,9 +57,9 @@ function iconsListByTag(tag) {
 function iconsListByPopularity(coubt = iconsLength) {
   data
     .sort((a, b) => {
-      return a.popularity < b.popularity ? 1 : -1;
-    })
-    .slice(0, coubt - 1);
+      return ((a.popularity < b.popularity) ? 1 : -1);
+    });
+  return data.slice(0, coubt - 1);
 }
 
 // export

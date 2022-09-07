@@ -1,5 +1,9 @@
 # material icons list / CHANGELOG
 
+## v1.1.1 / 7-sept-2022 12:23 (GMT+1)
+
+- add param to get only names from **iconsListByPopularity()**
+
 ## v1.1.0 / 26-feb-2021 14:50 (GMT+1)
 
 - deprecated _puppeteer_
